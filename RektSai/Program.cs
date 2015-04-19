@@ -18,10 +18,10 @@ namespace RektSai
 
         public static void Main(string[] args)
         {
-            CustomEvents.Game.OnGameLoad += Game_OnGameLoad;
+            CustomEvents.Game.OnGameLoad += OnGameLoad;
         }
 
-        private static void Game_OnGameLoad(EventArgs args)
+        private static void OnGameLoad(EventArgs args)
         {
             // Validate champ name
             if (player.ChampionName != CHAMP_NAME)
