@@ -38,7 +38,7 @@ namespace RektSai
             Utility.HpBarDamageIndicator.Enabled = true;
 
             // Listen to other events
-            Game.OnUpdate += Game_OnGameUpdate;
+            Game.OnUpdate += OnGameUpdate;
             Orbwalking.AfterAttack += ActiveModes.AfterAttack;
             Obj_AI_Hero.OnProcessSpellCast += Obj_AI_Hero_OnProcessSpellCast;
             Drawing.OnDraw += Drawing_OnDraw;
@@ -70,7 +70,7 @@ namespace RektSai
             }
         }
 
-        private static void Game_OnGameUpdate(EventArgs args)
+        private static void OnGameUpdate(EventArgs args)
         {
             // Always active stuff, ignite and stuff :P
             ActiveModes.OnPermaActive();
